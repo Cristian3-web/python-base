@@ -1,6 +1,5 @@
-#!/c/Users/bueno/AppData/Local/Programs/Python/Python313/python
+/home/cristian/Documentos/python-base/hello.py
 
-"""
 hello world multi línguas.
 
 depedendo da língua  configurada no mesmo ambiente o progama exibe correposdente.
