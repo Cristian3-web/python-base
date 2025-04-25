@@ -1,8 +1,9 @@
-/home/cristian/Documentos/python-base/hello.py
-
+"""
+!usr/bin/env
 hello world multi línguas.
+depedendo da língua  configurada no mesmo ambiente o programa 
+exibe correposdente.
 
-depedendo da língua  configurada no mesmo ambiente o progama exibe correposdente.
 
 
 Como usar:
@@ -14,22 +15,27 @@ export LANG:pt_BR
 
 
 execução:
-
 python3 hello.py
 ou ./hello.py
-
 """
 __version__ = "0.0.1"
 __author__ = "Cristian"
 __lincense__ = "Unlicense"
 
-current_language = "pt_BR"
-msg = "hello, World!"
+
+import os
+current_language = os.getenv("LANG","en_US")[:5 ]
+msg = "Hello, World!"
+
 
 if current_language == "pt_BR":
-    msg = "Olá, Mundo!"
- elif current_language == "it_IT":
-    msg = "Ciao, Mondo!"
+    msg = "Olá, mundo!"
+elif current_language == "it_IT":
+    msg = "Ciao, mondo!"
+elif current_language == "es_SP":
+    msg = "Hola, mundo!"
+elif current_language == "fr_FR":
+    msg = "Bonjour le monde"
 
 
 print(msg)
